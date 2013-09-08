@@ -1,0 +1,117 @@
+//
+//  ECSDescribeInstanceTypeResult.h
+//  samples_ios
+//
+//  Created by zhang baocai on 9/5/13.
+//
+//
+
+#import "ECSResult.h"
+/*
+ <DescribeInstanceTypesResponse>
+ <InstanceTypes>
+ <InstanceType>
+ <CpuCoreCount>1</CpuCoreCount>
+ <InstanceTypeId>ecs.t1.xsmall</InstanceTypeId>
+ <MemorySize>0.5</MemorySize>
+ </InstanceType>
+ <InstanceType>
+ <CpuCoreCount>1</CpuCoreCount>
+ <InstanceTypeId>ecs.t1.small</InstanceTypeId>
+ <MemorySize>1.0</MemorySize>
+ </InstanceType>
+ <InstanceType>
+ <CpuCoreCount>1</CpuCoreCount>
+ <InstanceTypeId>ecs.s1.xsmall</InstanceTypeId>
+ <MemorySize>1.5</MemorySize>
+ </InstanceType>
+ <InstanceType>
+ <CpuCoreCount>1</CpuCoreCount>
+ <InstanceTypeId>ecs.s1.small</InstanceTypeId>
+ <MemorySize>2.0</MemorySize>
+ </InstanceType>
+ <InstanceType>
+ <CpuCoreCount>1</CpuCoreCount>
+ <InstanceTypeId>ecs.s1.medium</InstanceTypeId>
+ <MemorySize>4.0</MemorySize>
+ </InstanceType>
+ <InstanceType>
+ <CpuCoreCount>2</CpuCoreCount>
+ <InstanceTypeId>ecs.s2.xsmall</InstanceTypeId>
+ <MemorySize>1.5</MemorySize>
+ </InstanceType>
+ <InstanceType>
+ <CpuCoreCount>2</CpuCoreCount>
+ <InstanceTypeId>ecs.s2.small</InstanceTypeId>
+ <MemorySize>2.0</MemorySize>
+ </InstanceType>
+ <InstanceType>
+ <CpuCoreCount>2</CpuCoreCount>
+ <InstanceTypeId>ecs.s2.medium</InstanceTypeId>
+ <MemorySize>2.5</MemorySize>
+ </InstanceType>
+ <InstanceType>
+ <CpuCoreCount>2</CpuCoreCount>
+ <InstanceTypeId>ecs.s2.large</InstanceTypeId>
+ <MemorySize>4.0</MemorySize>
+ </InstanceType>
+ <InstanceType>
+ <CpuCoreCount>2</CpuCoreCount>
+ <InstanceTypeId>ecs.s2.xlarge</InstanceTypeId>
+ <MemorySize>8.0</MemorySize>
+ </InstanceType>
+ <InstanceType>
+ <CpuCoreCount>4</CpuCoreCount>
+ <InstanceTypeId>ecs.s3.medium</InstanceTypeId>
+ <MemorySize>4.0</MemorySize>
+ </InstanceType>
+ <InstanceType>
+ <CpuCoreCount>4</CpuCoreCount>
+ <InstanceTypeId>ecs.s3.large</InstanceTypeId>
+ <MemorySize>8.0</MemorySize>
+ </InstanceType>
+ <InstanceType>
+ <CpuCoreCount>4</CpuCoreCount>
+ <InstanceTypeId>ecs.m1.small</InstanceTypeId>
+ <MemorySize>12.0</MemorySize>
+ </InstanceType>
+ <InstanceType>
+ <CpuCoreCount>4</CpuCoreCount>
+ <InstanceTypeId>ecs.m1.medium</InstanceTypeId>
+ <MemorySize>16.0</MemorySize>
+ </InstanceType>
+ <InstanceType>
+ <CpuCoreCount>8</CpuCoreCount>
+ <InstanceTypeId>ecs.m1.large</InstanceTypeId>
+ <MemorySize>24.0</MemorySize>
+ </InstanceType>
+ <InstanceType>
+ <CpuCoreCount>8</CpuCoreCount>
+ <InstanceTypeId>ecs.m1.xlarge</InstanceTypeId>
+ <MemorySize>32.0</MemorySize>
+ </InstanceType>
+ <InstanceType>
+ <CpuCoreCount>8</CpuCoreCount>
+ <InstanceTypeId>ecs.c1.small</InstanceTypeId>
+ <MemorySize>8.0</MemorySize>
+ </InstanceType>
+ <InstanceType>
+ <CpuCoreCount>8</CpuCoreCount>
+ <InstanceTypeId>ecs.c1.medium</InstanceTypeId>
+ <MemorySize>12.0</MemorySize>
+ </InstanceType>
+ <InstanceType>
+ <CpuCoreCount>8</CpuCoreCount>
+ <InstanceTypeId>ecs.c1.large</InstanceTypeId>
+ <MemorySize>16.0</MemorySize>
+ </InstanceType>
+ </InstanceTypes>
+ </DescribeInstanceTypesResponse>
+ */
+@interface ECSDescribeInstanceTypeResult : ECSResult
+{
+    NSArray *_instanceTypes;
+}
+@property(nonatomic,retain)NSArray *instanceTypes;
+-(id)initWithXMLData:(NSData *)data;
+@end
